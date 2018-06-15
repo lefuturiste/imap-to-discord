@@ -4,6 +4,16 @@ require("dotenv").config();
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
 
 function sendWH(url, mail) {
+    console.log("from: " + mail.from[0].address)
+    var avatar = ""
+    var addrs = require("email-addresses")
+    var favicon = require('favicon')
+    var url = "https://" + addrs.parseOneAddress(mail.from[0].address).domain
+    console.log(url);
+    favicon(url, (err, favicon_url) => {
+      var avatar = favicon_url;
+    });
+    console.log(avatar);
     require("axios").post(url, {
       // content: "New email",
       content: "",
@@ -12,11 +22,17 @@ function sendWH(url, mail) {
           title: mail.headers.subject,
           author: {
             name: mail.headers.from,
-            icon_url: "https://www.gravatar.com/avatar/" + require("md5")(mail.from[0].address)
+            icon_url: avatar
           }
         }
       ]
+    }).then((response) => {
+    }).catch((err) => {
+      console.log("err");
+      console.log(err);
     })
+    console.log("*************End of new email***************");
+    console.log("");
 }
 
 const notifier = require('mail-notifier');

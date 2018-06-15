@@ -1,0 +1,38 @@
+{
+  "name": "imap_to_discord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "imap_to_discord.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^6.0.0",
+    "email-addresses": "^3.0.1",
+    "favicon": "0.0.2",
+    "gravatar": "^1.6.0",
+    "imap": "^0.8.19",
+    "mail-listener2": "^0.3.1",
+    "mail-notifier": "^0.5.0",
+    "md5": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lefuturiste/imap_to_discord.git"
+  },
+  "keywords": [
+    "imap",
+    "discord",
+    "mail",
+    "listener",
+    "webhook"
+  ],
+  "author": "lefuturiste <contact@lefuturiste.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lefuturiste/imap_to_discord/issues"
+  },
+  "homepage": "https://github.com/lefuturiste/imap_to_discord#readme"
+}
