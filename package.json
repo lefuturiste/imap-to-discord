@@ -4,7 +4,7 @@
   "description": "",
   "main": "imap_to_discord.js",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "dotenv": "^6.0.0",
     "email-addresses": "^3.0.1",
     "favicon": "0.0.2",
